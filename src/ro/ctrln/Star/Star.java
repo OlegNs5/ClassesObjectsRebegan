@@ -73,26 +73,8 @@ public class Star {
 }
 
 
-        public String computePlanetLocation(SmallPlanet smallPlanet, int location){
-            String planetLocation = this.StarDiscription + smallPlanet.getPlanetName() + location ;
-            return planetLocation;
-        }
+
 
 }
 
-    class SmallPlanet{
-            private String planetName;
 
-                public String getPlanetName() {
-        return this.planetName;
-    }
-
-        public void setPlanetName(String planetName) {
-                    this.planetName = planetName;
-        }
-    }
-
-
-class planeteMici{
-    private String planeteMari;
-}

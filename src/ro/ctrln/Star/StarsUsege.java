@@ -32,8 +32,8 @@ public class StarsUsege {
             star.setSmallPlanet(starPlanet);
             mars.setSmallPlanet(marsPlanet);
 
-            System.out.println(star.computePlanetLocation(starPlanet, 20));
-            System.out.println(star.computePlanetLocation(starPlanet,30));
+            System.out.println(starPlanet.computePlanetLocation(star, 20));
+            System.out.println(starPlanet.computePlanetLocation(star,30));
         }
     }
 
