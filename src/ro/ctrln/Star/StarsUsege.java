@@ -20,7 +20,7 @@ public class StarsUsege {
 
             Star mars = new Star("ACEAST ESTE STEAUA MARS ",2000,20,new BigDecimal(5000));
             mars.setSmallPlanet(new SmallPlanet());
-            //mars.setplaneteMici(new planeteMici());
+            mars.setplaneteMici(new planeteMici());
             System.out.println(mars);
 
             SmallPlanet starPlanet = new SmallPlanet();
@@ -29,11 +29,15 @@ public class StarsUsege {
             SmallPlanet marsPlanet = new  SmallPlanet();
             marsPlanet.setPlanetName("numele planetei din jurul planetei Marte este! ");
 
+            planeteMici numelePlanetei = new planeteMici();
+            numelePlanetei.setPlaneteMari("the name of big planes is ");
+
             star.setSmallPlanet(starPlanet);
             mars.setSmallPlanet(marsPlanet);
 
             System.out.println(starPlanet.computePlanetLocation(star, 20));
-            System.out.println(starPlanet.computePlanetLocation(star,30));
+            System.out.println(marsPlanet.computePlanetLocation(mars,30));
+            System.out.println(numelePlanetei.computePlanetLocation(mars,40));
         }
     }
 

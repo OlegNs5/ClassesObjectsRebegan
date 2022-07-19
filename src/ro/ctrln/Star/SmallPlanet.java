@@ -2,6 +2,7 @@ package ro.ctrln.Star;
 
 public class SmallPlanet {
     private String planetName;
+    private String planeteMari;
 
     public String getPlanetName() {
         return this.planetName;
@@ -24,4 +25,13 @@ public class SmallPlanet {
 
 class planeteMici {
     private String planeteMari;
+
+    public void setPlaneteMari(String planeteMari) {
+        this.planeteMari = planeteMari;
+
+    }
+
+    public String computePlanetLocation(Star planeteMari, int location) {
+        return planeteMari.getStarDiscription() + this.planeteMari + location;
+    }
 }
