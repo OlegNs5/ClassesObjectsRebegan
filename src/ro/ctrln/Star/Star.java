@@ -1,6 +1,7 @@
 package ro.ctrln.Star;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 
 public class Star {
@@ -58,12 +59,14 @@ public class Star {
             this.mass = mass;
         }
 
-    public void setplaneteMici( planeteMici PlaneteMici) {
-        this.PlaneteMici = PlaneteMici;
-    }
+
         public planeteMici getPlaneteMici() {
             return this.PlaneteMici;
         }
+    public void setplaneteMici(planeteMici planeteMici) {
+            this.PlaneteMici = planeteMici;
+
+    }
 
         public void setSmallPlanet( SmallPlanet smallPlanet) {
             this.smallPlanet = smallPlanet;
@@ -73,8 +76,39 @@ public class Star {
 }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Star star = (Star) o;
+        return this.diameter == star.diameter &&
+                this.satellites == star.satellites &&
+                this.StarDiscription.equals(star.StarDiscription) &&
+                this.mass.equals(star.mass) &&
+                this.smallPlanet.equals(star.smallPlanet) &&
+                this.PlaneteMici.equals(star.PlaneteMici);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(StarDiscription, diameter, satellites, mass, smallPlanet, PlaneteMici);
+    }
+
+    @Override
+    public String toString() {
+        return "Star{" +
+                "StarDiscription='" + StarDiscription + '\'' +
+                ", diameter=" + diameter +
+                ", satellites=" + satellites +
+                ", mass=" + mass +
+                ", smallPlanet=" + smallPlanet +
+                ", PlaneteMici=" + PlaneteMici +
+                '}';
+    }
 
 
+    public void setplaneteMici(String numPlaneteiMici) {
+    }
 }
 
 
